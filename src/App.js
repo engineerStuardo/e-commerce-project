@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { withAlert } from 'react-alert';
 
 import './App.scss';
 
@@ -21,7 +22,8 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, stateLogin } = this.props;
+    const alert = this.props.alert;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -31,7 +33,8 @@ class App extends React.Component {
             id: snapShop.id,
             ...snapShop.data(),
           });
-        });
+        });        
+        alert.success('Thanks for signing up!');
       } else {
         setCurrentUser(userAuth);
       }
@@ -72,4 +75,4 @@ const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withAlert()(connect(mapStateToProps, mapDispatchToProps)(App));

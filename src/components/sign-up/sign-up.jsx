@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAlert } from 'react-alert';
 
 import './sign-up.scss';
 
@@ -17,9 +18,10 @@ class SignUp extends React.Component {
   handleSubmit = async event => {
     event.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
+    const alert = this.props.alert;
 
     if (password !== confirmPassword) {
-      alert(`Password don't match`);
+      alert.error(`Password don't match`);
       return;
     }
 
@@ -93,4 +95,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default withAlert()(SignUp);

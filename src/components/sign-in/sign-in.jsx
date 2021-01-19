@@ -1,4 +1,6 @@
 import React from 'react';
+import { withAlert } from 'react-alert';
+
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 import './sign-in.scss';
@@ -16,6 +18,7 @@ class SignIn extends React.Component {
     event.preventDefault();
 
     const { email, password } = this.state;
+    const alert = this.props.alert;
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
@@ -24,7 +27,9 @@ class SignIn extends React.Component {
         password: '',
       });
     } catch (e) {
-      console.log(e);
+      e.code === 'auth/user-not-found'
+        ? alert.error('Invalid Email')
+        : alert.error('Invalid Password');
     }
   };
 
@@ -69,4 +74,4 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+export default withAlert()(SignIn);
