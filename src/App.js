@@ -22,8 +22,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
-    const alert = this.props.alert;
+    const { setCurrentUser, alert } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -33,7 +32,7 @@ class App extends React.Component {
             id: snapShop.id,
             ...snapShop.data(),
           });
-        });        
+        });
         alert.success('Thanks for signing up!');
       } else {
         setCurrentUser(userAuth);
