@@ -6,12 +6,12 @@ import { withAlert } from 'react-alert';
 
 import './App.scss';
 
-import HomePage from './pages/homepage/HomePage';
-import ShopPage from './pages/shop/ShopPage';
-import SignInAndOutPage from './pages/sign-in-and-up/sign-in-and-up';
-import CheckoutPage from './pages/checkout/checkout';
+import HomePage from './pages/homepage/home-page-component';
+import ShopPage from './pages/shop/shop-page-component';
+import SignInAndOutPage from './pages/sign-in-and-up/sign-in-and-up-component';
+import CheckoutPage from './pages/checkout/checkout-component';
 
-import Header from './components/header/header';
+import Header from './components/header/header-component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
