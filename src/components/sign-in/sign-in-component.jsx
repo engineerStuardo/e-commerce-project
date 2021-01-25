@@ -10,6 +10,7 @@ import {
   SignInContainer,
   SignInTitle,
   ButtonsBarContainer,
+  GoogleButtonStyles,
 } from './sign-in-styles';
 
 class SignIn extends React.Component {
@@ -68,9 +69,10 @@ class SignIn extends React.Component {
 
           <ButtonsBarContainer>
             <CustomButton type='submit'>Sign In</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-              Sign in with Google
-            </CustomButton>
+            <GoogleButtonStyles
+              type='dark'
+              onClick={signInWithGoogle}
+            />
           </ButtonsBarContainer>
         </form>
       </SignInContainer>
