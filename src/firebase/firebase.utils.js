@@ -43,6 +43,22 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
+export const convertCollectionsSnapshotToMap = collections => {
+  const transformedCollection = collections.docs.map(doc => {
+    const { title, items } = doc.data();
+    return {
+      id: doc.id,
+      routeName: encodeURI(title.toLowerCase()),
+      title,
+      items,
+    };
+  });
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.routeName] = collection;
+    return accumulator;
+  }, {});
+};
+
 //This code can be use to add a full collection into firebase
 //and this was build just to transfer all ShopData to firebase, and just to run once
 export const addCollectionAndDocuments = async (
