@@ -14,6 +14,19 @@ export const CartDropdownContainer = styled.div`
   top: 90px;
   right: 40px;
   z-index: 5;
+  animation: show 0.5s ease-in-out 1;
+
+  @keyframes show {
+    0% {
+      transform: scale(1.2);
+      opacity: 0;
+      border: 0.2 solid black;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 `;
 
 export const CartDropdownButton = styled(CustomButton)`
