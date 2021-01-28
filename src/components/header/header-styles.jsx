@@ -9,10 +9,32 @@ export const HeaderContainer = styled.div`
   margin-bottom: 25px;
 `;
 
+export const HomeText = styled.div`
+  position: absolute;
+  top: 62px;
+  left: 33px;
+`;
+
 export const LogoContainer = styled(Link)`
   height: 100%;
   width: 70px;
   padding: 25px;
+  position: relative;
+
+  &:hover {
+    animation: logoOnFocus 1.3s ease-in-out 1;
+  }
+
+  @keyframes logoOnFocus {
+    0% {
+      transform: scale(1.2);
+      opacity: 0.1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 `;
 
 export const OptionsContainer = styled.div`

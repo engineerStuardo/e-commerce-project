@@ -15,6 +15,7 @@ import { selectCurrentUser } from '../../redux/user/user-selector';
 import {
   HeaderContainer,
   LogoContainer,
+  HomeText,
   OptionsContainer,
   OptionLink,
 } from './header-styles';
@@ -23,6 +24,7 @@ const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
     <LogoContainer to='/'>
       <Logo />
+      <HomeText>HOME</HomeText>
     </LogoContainer>
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>
