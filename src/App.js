@@ -6,8 +6,8 @@ import { withAlert } from 'react-alert';
 
 import './App.scss';
 
-import HomePage from './pages/homepage/home-page-component';
-import ShopPage from './pages/shop/shop-page-component';
+import HomePage from './pages/homepage/home-component';
+import ShopPage from './pages/shop/shop-component';
 import SignInAndOutPage from './pages/sign-in-and-up/sign-in-and-up-component';
 import CheckoutPage from './pages/checkout/checkout-component';
 
