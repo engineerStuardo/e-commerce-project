@@ -20,6 +20,7 @@ export const LogoContainer = styled(Link)`
   width: 70px;
   padding: 25px;
   position: relative;
+  top: -18px;
 
   &:hover {
     animation: logoOnFocus 1.3s ease-in-out 1;
