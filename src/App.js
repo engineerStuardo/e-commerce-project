@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withAlert } from 'react-alert';
 
-import './App.scss';
+import { GlobalStyle } from './global-styles';
 
 import HomePage from './pages/homepage/home-component';
 import ShopPage from './pages/shop/shop-component';
@@ -48,6 +48,7 @@ class App extends React.Component {
     const { currentUser } = this.props;
     return (
       <div>
+        <GlobalStyle />
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />

@@ -7,12 +7,23 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottm: 10px;
+  }
 `;
 
 export const HomeText = styled.div`
   position: absolute;
   top: 62px;
   left: 33px;
+
+  @media screen and (max-width: 800px) {
+    top: 37px;
+    left: 10px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -21,6 +32,12 @@ export const LogoContainer = styled(Link)`
   padding: 25px;
   position: relative;
   top: -18px;
+
+  @media screen and (max-width: 800px) {
+    width: 50px;
+    padding: 0;
+    top: -10px;
+  }
 
   &:hover {
     animation: logoOnFocus 1.3s ease-in-out 1;
@@ -44,6 +61,10 @@ export const OptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 800px){
+    width: 80%;
+  }
 `;
 
 export const OptionLink = styled(Link)`
