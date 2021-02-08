@@ -7,6 +7,7 @@ export const CheckoutPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  animation: show 1.3s ease-in-out 1;
 
   button {
     margin-left: auto;
@@ -15,6 +16,17 @@ export const CheckoutPageContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     width: 90%;
+  }
+
+  @keyframes show {
+    0% {
+      transform: scale(1.05);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 `;
 
