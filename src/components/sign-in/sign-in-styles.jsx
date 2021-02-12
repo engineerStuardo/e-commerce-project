@@ -5,6 +5,10 @@ export const SignInContainer = styled.div`
   width: 380px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 800px) {
+    width: 99%;
+  }
 `;
 
 export const SignInTitle = styled.h2`
@@ -14,6 +18,10 @@ export const SignInTitle = styled.h2`
 export const ButtonsBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    justify-content: space-around;
+  }
 `;
 
 export const GoogleButtonStyles = styled(GoogleButton)`
