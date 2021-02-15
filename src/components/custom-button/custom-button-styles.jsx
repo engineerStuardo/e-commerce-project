@@ -47,5 +47,5 @@ export const CustomButtonContainer = styled.button`
 
   @media screen and (max-width: 800px) {
     min-width: 125px;
-  }
+  }  
 `;
