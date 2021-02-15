@@ -20,13 +20,13 @@ export const ButtonsBarContainer = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 800px) {
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 `;
 
 export const GoogleButtonStyles = styled(GoogleButton)`
   margin-left: 10px;
   @media screen and (max-width: 800px) {
-    flex-grow: 1;
+    flex-grow: 0;
   }
 `;
