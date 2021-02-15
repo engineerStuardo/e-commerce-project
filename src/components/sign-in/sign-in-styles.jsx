@@ -26,7 +26,4 @@ export const ButtonsBarContainer = styled.div`
 
 export const GoogleButtonStyles = styled(GoogleButton)`
   margin-left: 10px;
-  @media screen and (max-width: 800px) {
-    flex-grow: 0;
-  }
 `;
