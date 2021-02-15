@@ -68,7 +68,7 @@ export function* signOut() {
 export function* signUp({ payload: { email, password, displayName } }) {
   try {
     const { user } = yield auth.createUserWithEmailAndPassword(email, password);
-    const userRef = yield createUserProfileDocument(user, displayName);
+    const userRef = yield createUserProfileDocument(user, { displayName });
     const userSnapshot = yield userRef.get();
     yield put(signUpSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
   } catch (e) {
