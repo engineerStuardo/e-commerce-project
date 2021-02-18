@@ -18,6 +18,9 @@ import {
   WarningContainer,
 } from './checkout-styles';
 
+const month = new Date().getMonth() + 1;
+const year = new Date().getFullYear().toString().substr(-2);
+
 const CheckoutPage = ({ cartItems, total }) => (
   <CheckoutPageContainer>
     <CheckoutHeaderContainer>
@@ -44,7 +47,8 @@ const CheckoutPage = ({ cartItems, total }) => (
     <WarningContainer>
       *Please use the following test credit card for payments*
       <br />
-      4242 4242 4242 4242 - Exp: 01/21 - CVV: 123
+      4242 4242 4242 4242 - Exp: {month < 10 ? `0${month}` : `${month}`}/{year}{' '}
+      - CVV: 123
     </WarningContainer>
     <StripeCheckoutButton price={total} />
   </CheckoutPageContainer>
