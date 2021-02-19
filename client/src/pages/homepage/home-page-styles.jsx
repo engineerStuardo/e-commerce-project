@@ -5,6 +5,7 @@ export const HomePageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   animation: show 1.8s ease-in-out 1;
+  margin-top: 60px;
 
   @keyframes show {
     0% {

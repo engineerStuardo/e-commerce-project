@@ -8,6 +8,7 @@ export const CheckoutPageContainer = styled.div`
   align-items: center;
   margin: 50px auto 0;
   animation: show 1.3s ease-in-out 1;
+  margin-top: 60px;
 
   button {
     margin-left: auto;

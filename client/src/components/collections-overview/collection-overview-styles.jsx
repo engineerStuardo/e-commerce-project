@@ -4,6 +4,7 @@ export const CollectionsOverviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   animation: show 1.3s ease-in-out 1;
+  margin-top: 60px;
 
   @keyframes show {
     0% {

@@ -7,11 +7,17 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 66px;
+  background: white;
+  z-index: 1;
 
   @media screen and (max-width: 800px) {
-    height: 60px;
-    padding: 10px;
-    margin-bottm: 10px;
+    height: 75px;
+    padding: 20px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -62,7 +68,7 @@ export const OptionsContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     width: 80%;
   }
 `;
