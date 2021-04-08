@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `git push origin master -> for github`
+### `git push heroku master -> for heroku to prod`
+### `npm run dev -> to start app`
+
 In the project directory, you can run:
 
 ### `yarn start`
